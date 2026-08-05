@@ -352,3 +352,17 @@ body{
 
 
 }
+html, body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    direction:rtl;
+    text-align:right;
+}
+
+h1,h2,p,span,button,input{
+    direction:rtl;
+    unicode-bidi:bidi-override;
+}

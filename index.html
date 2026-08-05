@@ -2,144 +2,180 @@
 <html lang="fa" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DragonEye-AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>DragonEye-AI</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="app">
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-
-        <div class="logo">
-            🐉
-            <h2>DragonEye</h2>
-        </div>
-
-        <nav>
-
-            <button>
-                💬 چت هوشمند
-            </button>
-
-            <button>
-                🎨 ساخت تصویر
-            </button>
-
-            <button>
-                📝 سناریونویسی
-            </button>
-
-            <button>
-                🌍 ترجمه
-            </button>
-
-            <button>
-                ⚙️ تنظیمات
-            </button>
-
-        </nav>
-
-    </aside>
+<div class="home">
 
 
-    <!-- Main -->
+    <!-- Header -->
 
-    <main class="main">
+    <header class="header">
 
+        <div class="brand">
 
-        <header class="top">
-
-            <button class="menu-btn" onclick="toggleMenu()">
-                ☰
-            </button>
-
+            <div class="eye">
+                👁️🐉
+            </div>
 
             <div>
-                <h1>🐉 DragonEye-AI</h1>
-                <span>
-                    دستیار هوشمند شخصی
-                </span>
-            </div>
-
-
-        </header>
-
-
-
-        <section class="chat" id="chat">
-
-
-            <div class="welcome">
-
-                <div class="dragon">
-                    🐉
-                </div>
-
-
-                <h2>
-                    سلام 👋
-                </h2>
-
+                <h1>
+                    DragonEye-AI
+                </h1>
 
                 <p>
-                    من چشم اژدها هستم.
-                    آماده‌ام بهت کمک کنم.
+                    دستیار هوشمند شخصی
+                </p>
+            </div>
+
+        </div>
+
+
+        <button class="settings">
+            ⚙️
+        </button>
+
+
+    </header>
+
+
+
+
+    <!-- Center -->
+
+    <main class="center">
+
+
+        <div class="dragon-core">
+
+            <div class="eye-circle">
+                👁️
+            </div>
+
+        </div>
+
+
+
+        <h2>
+            سلام امیر 👋
+        </h2>
+
+
+        <p>
+            من چشم اژدها هستم.
+            آماده‌ام کمکت کنم.
+        </p>
+
+
+
+
+        <!-- Cards -->
+
+        <section class="cards">
+
+
+            <div class="card">
+
+                <span>
+                    💬
+                </span>
+
+                <h3>
+                    چت هوشمند
+                </h3>
+
+                <p>
+                    گفتگو با هوش مصنوعی
                 </p>
 
+            </div>
+
+
+
+
+            <div class="card">
+
+                <span>
+                    🎨
+                </span>
+
+                <h3>
+                    ساخت تصویر
+                </h3>
+
+                <p>
+                    خلق تصاویر با هوش مصنوعی
+                </p>
 
             </div>
 
 
 
-            <div class="messages" id="messages">
 
+
+            <div class="card">
+
+                <span>
+                    📝
+                </span>
+
+                <h3>
+                    سناریونویسی
+                </h3>
+
+                <p>
+                    ایده و داستان بساز
+                </p>
 
             </div>
+
+
+
+
+
+            <div class="card">
+
+                <span>
+                    💡
+                </span>
+
+                <h3>
+                    ایده‌پردازی
+                </h3>
+
+                <p>
+                    فکرهای جدید پیدا کن
+                </p>
+
+            </div>
+
 
 
         </section>
 
 
 
-        <footer class="input-box">
-
-
-            <button>
-                📎
-            </button>
-
-
-            <input 
-            id="messageInput"
-            type="text"
-            placeholder="پیامت را بنویس..."
-            >
-
-
-            <button onclick="sendMessage()">
-                ➤
-            </button>
-
-
-        </footer>
-
-
-
     </main>
+
+
 
 
 </div>
 
 
-
 <script src="script.js"></script>
+
 
 </body>
 

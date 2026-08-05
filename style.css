@@ -1,72 +1,354 @@
-body {
-    margin: 0;
-    font-family: Tahoma, sans-serif;
-    background: #0b0b0f;
-    color: white;
+*{
+    box-sizing:border-box;
+    font-family:Tahoma,Arial,sans-serif;
 }
 
-.app {
-    max-width: 500px;
-    margin: auto;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+body{
+    margin:0;
+    background:#050505;
+    color:white;
+    overflow:hidden;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background: #151520;
+
+.app{
+    width:100%;
+    height:100vh;
+    display:flex;
 }
 
-header h1 {
-    margin: 0;
-    color: #ff6b00;
+
+/* Sidebar */
+
+.sidebar{
+
+    width:270px;
+    background:
+    linear-gradient(180deg,#111,#050505);
+
+    border-left:1px solid rgba(255,140,0,.2);
+
+    padding:25px;
+
+    position:fixed;
+    right:0;
+    top:0;
+    height:100%;
+
+    transition:.4s;
+
+    z-index:10;
 }
 
-.chat-box {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
+
+.logo{
+
+    text-align:center;
+    margin-bottom:40px;
+
 }
 
-.message {
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 15px;
-    max-width: 80%;
+
+.logo h2{
+
+    color:#ff8c00;
+    margin-top:10px;
+
 }
 
-.ai {
-    background: #20202b;
-    margin-left: auto;
+
+.logo:first-letter{
+
+    font-size:50px;
+
 }
 
-.user {
-    background: #ff6b00;
-    color: black;
-    margin-right: auto;
+
+.sidebar button{
+
+    width:100%;
+    padding:15px;
+
+    margin:10px 0;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,140,0,.2);
+
+    border-radius:15px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
 
-.input-area {
-    display: flex;
-    padding: 10px;
-    background: #151520;
+
+
+.sidebar button:hover{
+
+    background:#ff8c00;
+    color:black;
+
+    transform:translateX(-5px);
+
 }
 
-input {
-    flex: 1;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
+
+/* Main */
+
+.main{
+
+    flex:1;
+
+    margin-right:270px;
+
+    display:flex;
+
+    flex-direction:column;
+
 }
 
-button {
-    margin-right: 8px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    background: #ff6b00;
-    cursor: pointer;
+
+
+/* Header */
+
+
+.top{
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px;
+
+    background:
+
+    rgba(20,20,20,.7);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,140,0,.2);
+
+}
+
+
+.top h1{
+
+    margin:0;
+
+    color:#ff8c00;
+
+}
+
+
+.top span{
+
+    color:#aaa;
+
+}
+
+
+
+.menu-btn{
+
+    display:none;
+
+    background:none;
+
+    border:0;
+
+    color:white;
+
+    font-size:25px;
+
+}
+
+
+/* Chat */
+
+
+.chat{
+
+    flex:1;
+
+    padding:30px;
+
+    overflow-y:auto;
+
+}
+
+
+
+.welcome{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+
+.dragon{
+
+    font-size:80px;
+
+    animation:float 3s infinite;
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+.messages{
+
+    margin-top:30px;
+
+}
+
+
+
+.message{
+
+    max-width:75%;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    margin:15px 0;
+
+}
+
+
+
+.user{
+
+    background:#ff8c00;
+
+    color:black;
+
+    margin-right:auto;
+
+}
+
+
+.ai{
+
+    background:#181818;
+
+    border:1px solid rgba(255,140,0,.2);
+
+    margin-left:auto;
+
+}
+
+
+
+/* Input */
+
+
+.input-box{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:15px;
+
+    background:#111;
+
+}
+
+
+.input-box input{
+
+    flex:1;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    border:none;
+
+    outline:none;
+
+    background:#222;
+
+    color:white;
+
+}
+
+
+
+.input-box button{
+
+    width:50px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#ff8c00;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:700px){
+
+
+.sidebar{
+
+    transform:translateX(100%);
+
+}
+
+
+.sidebar.active{
+
+    transform:translateX(0);
+
+}
+
+
+.main{
+
+    margin-right:0;
+
+}
+
+
+.menu-btn{
+
+    display:block;
+
+}
+
+
 }

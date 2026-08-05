@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DragonEye-AI</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,27 +14,133 @@
 
 <div class="app">
 
-    <header>
-        <h1>🐉 DragonEye-AI</h1>
-        <p>دستیار هوشمند شخصی</p>
-    </header>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
 
-    <div id="chatBox" class="chat-box">
-        <div class="message ai">
-            سلام 👁️🐉  
-            من چشم اژدها هستم. چطور کمکت کنم؟
+        <div class="logo">
+            🐉
+            <h2>DragonEye</h2>
         </div>
-    </div>
 
-    <div class="input-area">
-        <input id="userInput" type="text" placeholder="پیامت را بنویس...">
-        <button onclick="sendMessage()">ارسال</button>
-    </div>
+        <nav>
+
+            <button>
+                💬 چت هوشمند
+            </button>
+
+            <button>
+                🎨 ساخت تصویر
+            </button>
+
+            <button>
+                📝 سناریونویسی
+            </button>
+
+            <button>
+                🌍 ترجمه
+            </button>
+
+            <button>
+                ⚙️ تنظیمات
+            </button>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <main class="main">
+
+
+        <header class="top">
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+
+            <div>
+                <h1>🐉 DragonEye-AI</h1>
+                <span>
+                    دستیار هوشمند شخصی
+                </span>
+            </div>
+
+
+        </header>
+
+
+
+        <section class="chat" id="chat">
+
+
+            <div class="welcome">
+
+                <div class="dragon">
+                    🐉
+                </div>
+
+
+                <h2>
+                    سلام 👋
+                </h2>
+
+
+                <p>
+                    من چشم اژدها هستم.
+                    آماده‌ام بهت کمک کنم.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="messages" id="messages">
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <footer class="input-box">
+
+
+            <button>
+                📎
+            </button>
+
+
+            <input 
+            id="messageInput"
+            type="text"
+            placeholder="پیامت را بنویس..."
+            >
+
+
+            <button onclick="sendMessage()">
+                ➤
+            </button>
+
+
+        </footer>
+
+
+
+    </main>
+
 
 </div>
+
 
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
